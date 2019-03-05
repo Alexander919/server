@@ -37,7 +37,7 @@ app.get('/bad', function (req, res) {
     res.send({errorMessage: 'Something went wrong'});
 });
 
-
-app.listen(3000, function() {
-    console.log('The server is up and running!');
+const port = process.env.PORT || 3000;
+app.listen(port, function() {
+    console.log(`The server is up and running on port ${port}!`);
 });
